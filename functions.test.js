@@ -51,3 +51,17 @@ test('empty array should be truthy', () => {
 test('user should be Ethan McNeal object', () => {
     expect(functions.createUser()).toStrictEqual({firstName: 'Ethan', lastName: 'McNeal'})
 }) // passes
+
+
+//toBeLessThan or //toBeGreaterThan
+test('Sum should be under 1000 but Product should be greater than 1000', () => {
+    const load1 = 800;
+    const load2 = 150;;
+    expect(load1 + load2).toBeLessThan(1000)
+    expect(load1 * load2).toBeGreaterThan(1000)
+})
+
+//Regex
+test('There is no I in team', () => {
+    expect('team').not.toMatch(/I/i)
+})
