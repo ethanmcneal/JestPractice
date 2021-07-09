@@ -21,3 +21,22 @@ test('adds 2 + 2 to NOT equal 5', () => {
 test('should be Null', () => {
     expect(functions.isNull()).toBeNull()
 })
+
+test('null should be falsy', () => {
+    expect(functions.checkValue(null)).toBeFalsy()
+})
+test('0 should be falsy', () => {
+    expect(functions.checkValue(0)).toBeFalsy()
+})
+test('undefined should be falsy', () => {
+    expect(functions.checkValue(undefined)).toBeFalsy()
+})
+test('empty string should be falsy', () => {
+    expect(functions.checkValue('')).toBeFalsy()
+})
+test('empty array should NOT be falsy', () => {
+    expect(functions.checkValue([])).not.toBeFalsy()
+})
+test('empty array should be truthy', () => {
+    expect(functions.checkValue([])).toBeTruthy()
+})
