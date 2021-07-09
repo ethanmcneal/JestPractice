@@ -1,5 +1,7 @@
 const functions = require('./functions')
 
+
+//toBe
 test('adds 2 + 2 to equal 4', () => {
     expect(functions.add(2, 2)).toBe(4)
 })
@@ -40,3 +42,12 @@ test('empty array should NOT be falsy', () => {
 test('empty array should be truthy', () => {
     expect(functions.checkValue([])).toBeTruthy()
 })
+
+
+// test('user should be Ethan McNeal object', () => {
+//     expect(functions.createUser()).toBe({firstName: 'Ethan', lastName: 'McNeal'})
+// }) // fails => want to use toEqual or toStrictEqual
+
+test('user should be Ethan McNeal object', () => {
+    expect(functions.createUser()).toStrictEqual({firstName: 'Ethan', lastName: 'McNeal'})
+}) // passes
