@@ -65,3 +65,10 @@ test('Sum should be under 1000 but Product should be greater than 1000', () => {
 test('There is no I in team', () => {
     expect('team').not.toMatch(/I/i)
 })
+
+
+//toContain
+test('Admin should be in userNames', () => {
+    const userNames = ['bob', 'joe', 'billy', 'admin'];
+    expect(userNames).toContain('admin')
+})
